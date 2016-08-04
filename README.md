@@ -1,9 +1,9 @@
-# PSR-7 Message Implementation
+# PSR-7 报文实现
 
 This repository contains a full [PSR-7](http://www.php-fig.org/psr/psr-7/)
 message implementation, several stream decorators, and some helpful
 functionality like query string parsing.
-
+本库包含一个[PSR-7](http://www.php-fig.org/psr/psr-7/)报文规范的完整实现，以及几个流装饰器，和几个例如查询字符串解析的实用方法
 
 [![Build Status](https://travis-ci.org/guzzle/psr7.svg?branch=master)](https://travis-ci.org/guzzle/psr7)
 
@@ -12,14 +12,14 @@ functionality like query string parsing.
 
 This package comes with a number of stream implementations and stream
 decorators.
-
+这个包带有一些流的实现以及流的装饰
 
 ## AppendStream
 
 `GuzzleHttp\Psr7\AppendStream`
 
 Reads from multiple streams, one after the other.
-
+以追加的形式读取多个流
 ```php
 use GuzzleHttp\Psr7;
 
@@ -39,10 +39,11 @@ echo $composed; // abc, 123. Above all listen to me.
 
 Provides a buffer stream that can be written to fill a buffer, and read
 from to remove bytes from the buffer.
-
+提供一个可进行写入与读取操作的缓冲流。
 This stream returns a "hwm" metadata value that tells upstream consumers
 what the configured high water mark of the stream is, or the maximum
 preferred size of the buffer.
+该流返回一个“hwm”的元数据用来告诉上层节点缓冲容量
 
 ```php
 use GuzzleHttp\Psr7;
