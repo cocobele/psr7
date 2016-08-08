@@ -85,6 +85,7 @@ echo $stream->tell();
 
 Stream decorator that begins dropping data once the size of the underlying
 stream becomes too full.
+一个当流的尺寸过于饱和时用来抛弃数据的流装饰品
 
 ```php
 use GuzzleHttp\Psr7;
